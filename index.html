@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de los Clientes</title>
+    <!-- Agrega tus estilos CSS aquí -->
+    <link rel="stylesheet" href="clientes.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Datos de los Clientes</h1>
+        <div class="buttons">
+            <button onclick="showSection('anses')">ANSES</button>
+            <button onclick="showSection('registroCivil')">Registro Civil</button>
+            <button onclick="showSection('bnaPlus')">BNA+</button>
+            <button onclick="showSection('macro')">MACRO</button>
+        </div>
+        <section id="anses" class="hidden">
+            <h2>ANSES</h2>
+            <table>
+                <!-- Los datos de los clientes para ANSES se insertarán aquí -->
+            </table>
+        </section>
+        <section id="registroCivil" class="hidden">
+            <h2>Registro Civil</h2>
+            <table>
+                <!-- Los datos de los clientes para Registro Civil se insertarán aquí -->
+            </table>
+        </section>
+        <section id="bnaPlus" class="hidden">
+            <h2>BNA+</h2>
+            <table>
+                <!-- Los datos de los clientes para BNA+ se insertarán aquí -->
+            </table>
+        </section>
+        <section id="macro" class="hidden">
+            <h2>MACRO</h2>
+            <table>
+                <!-- Los datos de los clientes para MACRO se insertarán aquí -->
+            </table>
+        </section>
+    </div>
+    <script src="cargarDatos.js"></script>
+    <script>
+        function showSection(id) {
+            // Oculta todas las secciones
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Muestra la sección seleccionada
+            const selectedSection = document.getElementById(id);
+            selectedSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

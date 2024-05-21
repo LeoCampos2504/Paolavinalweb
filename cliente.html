@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <!-- Agrega tus estilos CSS aquí -->
+    <link rel="stylesheet" href="clientes.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Turnero</h1>
+        <form action="http://localhost:3000/rutaDondeRecibesElFormulario" method="POST">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br>
+            <label for="documento">Número de Documento:</label>
+            <input type="text" id="documento" name="documento" required>
+            <br>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo">
+            <br>
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" required>
+            <br>
+            <label for="turno">Turno:</label>
+            <select id="turno" name="turno">
+                <option value="Anses">Anses</option>
+                <option value="Registro civil">Registro civil</option>
+                <option value="BNA+">BNA+</option>
+                <option value="MARO">MARO</option>
+            </select>
+            <br>
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe aquí los detalles de tu turno"></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        
+        <!-- Información de tu negocio -->
+        <div class="contact-info">
+            <p>Contacto: Tu número de celular</p>
+            <p>Correo: Tu dirección de correo</p>
+            <p>Horario de atención: Lunes a viernes, de 9:00 a 18:00</p>
+        </div>
+    </div>
+</body>
+</html>
+
